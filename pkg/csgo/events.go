@@ -2,7 +2,6 @@ package csgo
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/mayankfawkes/csgohack/pkg/events"
 )
@@ -31,7 +30,7 @@ func Keyboard() {
 
 			if events.VK_F10 == m.KBDLLHOOKSTRUCT.VkCode {
 				fmt.Printf("Exiting...\n")
-				os.Exit(1)
+				State.Close()
 			}
 
 			if events.VK_ESCAPE == m.KBDLLHOOKSTRUCT.VkCode {

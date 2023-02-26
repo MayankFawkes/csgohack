@@ -83,3 +83,7 @@ func (s *Storage) UpdateGun(g string) bool {
 	}
 
 }
+
+func (s *Storage) Close() {
+	s.BtnPress <- false
+}

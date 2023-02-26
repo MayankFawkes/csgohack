@@ -28,7 +28,6 @@ func StartRecoil(g Gun, mouse device.ProcMouse) {
 		if State.IsLeftKeyDown() {
 			mouse.Move(p.x, p.y)
 			time.Sleep(time.Duration(p.sleep) * time.Millisecond)
-			// time.Sleep(84 * time.Millisecond)
 		} else {
 			mouse.LeftKeyUp()
 			break
@@ -39,11 +38,6 @@ func StartRecoil(g Gun, mouse device.ProcMouse) {
 }
 
 func BotStart() {
-
-	SENS = 2.52
-	ZOONSENS = 1.0
-
-	MODIFIER = 2.52 / SENS
 
 	initGunPoints()
 
