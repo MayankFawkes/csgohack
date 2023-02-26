@@ -22,7 +22,7 @@ jobs:
         run: go get .
 
       - name: Build
-        run: GOOS=windows GOARCH=amd64 go build -v -o filesync-${{ matrix.go-version }}
+        run: GOOS=windows GOARCH=amd64 go build -v -o filesync-${{ matrix.go-version }}.exe
 
       - name: Upload Go test results
         uses: actions/upload-artifact@v3
